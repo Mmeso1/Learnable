@@ -8,7 +8,7 @@ Learnable Git Task
 
 ## Difference between git and github
 
-- git is a popular version control system for tracking changes, who made those changes and coding colaboration while github is a code hosting platform for version control nad collaboration letting one work with others on projects from anywhere.
+- git is a popular version control system for tracking changes, who made those changes and coding colaboration while github is a code hosting platform for version control and collaboration letting one work with others on projects from anywhere.
 
 ## Github alternatives
 
