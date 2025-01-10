@@ -1,4 +1,4 @@
-const savePost = require("./functions").savePost;
+const { savePost, viewPosts, deleteThisPost } = require("./functions");
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -17,13 +17,13 @@ rl.prompt();
 rl.on("line", (input) => {
   switch (input.trim()) {
     case "1":
-      console.log("View all posts");
+      viewPosts();
       break;
     case "2":
       createPost();
       break;
     case "3":
-      console.log("Delete a post");
+      deletePost();
       break;
     case "4":
       console.log("Exit");
@@ -46,6 +46,23 @@ const createPost = async () => {
     const content = await askQuestion("> Enter the content: ");
     const author = await askQuestion("> Enter the author: ");
     savePost(title, image, content, author);
+  } catch (error) {
+    console.log("What went wrong:", error);
+  }
+};
+
+const deletePost = async () => {
+  try {
+    const postNum = await askQuestion(
+      "Enter the number of the post to delete: "
+    );
+    const index = parseInt(postNum, 10);
+
+    if (isNaN(index) || index < 1) {
+      console.log("Invalid input. Please enter a valid post number.");
+    } else {
+      deleteThisPost(index);
+    }
   } catch (error) {
     console.log("What went wrong:", error);
   }
