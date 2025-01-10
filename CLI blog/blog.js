@@ -6,33 +6,15 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.write("Welcome to the CLI blog!\n");
-rl.write("Choose an aciton by selecting a number:\n");
-rl.setPrompt(
-  "\n 1. View all posts\n 2. Create a post\n 3. Delete a post\n 4. Exit\n\n"
-);
-rl.prompt();
-
-// switch function to perform actions based on user input
-rl.on("line", (input) => {
-  switch (input.trim()) {
-    case "1":
-      viewPosts();
-      break;
-    case "2":
-      createPost();
-      break;
-    case "3":
-      deletePost();
-      break;
-    case "4":
-      console.log("Exit");
-      rl.close();
-      break;
-    default:
-      console.log("Invalid choice");
-  }
-});
+const displayMenu = () => {
+  console.log("\nChoose an action by selecting a number:");
+  console.log("1. View all posts");
+  console.log("2. Create a post");
+  console.log("3. Edit a post");
+  console.log("4. Delete a post");
+  console.log("5. Exit\n");
+  rl.prompt();
+};
 
 const askQuestion = (question) => {
   return new Promise((resolve) => rl.question(question, resolve));
@@ -51,6 +33,8 @@ const createPost = async () => {
   }
 };
 
+const editPost = async () => {};
+
 const deletePost = async () => {
   try {
     const postNum = await askQuestion(
@@ -59,7 +43,7 @@ const deletePost = async () => {
     const index = parseInt(postNum, 10);
 
     if (isNaN(index) || index < 1) {
-      console.log("Invalid input. Please enter a valid post number.");
+      console.log("Invalid input. Please enter a valid number.");
     } else {
       deleteThisPost(index);
     }
@@ -67,3 +51,37 @@ const deletePost = async () => {
     console.log("What went wrong:", error);
   }
 };
+
+// switch function to perform actions based on user input
+rl.on("line", (input) => {
+  switch (input.trim()) {
+    case "1":
+      viewPosts();
+      displayMenu();
+      break;
+    case "2":
+      createPost();
+      displayMenu();
+      break;
+    case "4":
+      editPost();
+      displayMenu();
+      break;
+    case "4":
+      deletePost();
+      displayMenu();
+      break;
+    case "5":
+      console.log("Exit");
+      rl.close();
+      break;
+    default:
+      console.log("Invalid choice");
+  }
+});
+
+rl.write("Welcome to the CLI blog!\n");
+displayMenu();
+
+//I put these at the bottom of the file so that the program can go through the functions before the user can interact with it.
+// This is because the functions are hoisted to the top of the file.

@@ -64,13 +64,16 @@ function deleteThisPost(index) {
     const postIndex = index - 1;
 
     if (postIndex < 0 || postIndex >= posts.length) {
-      console.log("Invalid post number.");
+      console.log(
+        "A post with this number does not exist.\nPerharps, check the posts list and try again.\n"
+      );
       return;
     }
 
     const deletedPost = posts.splice(postIndex, 1);
     fs.writeFileSync(filename, JSON.stringify(posts, null, 2));
     console.log(`Deleted post: "${deletedPost[0].title}"`);
+    console.log("\nPost deleted successfully\n");
   }
 }
 
