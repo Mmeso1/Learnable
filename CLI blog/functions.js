@@ -77,4 +77,24 @@ function deleteThisPost(index) {
   }
 }
 
-module.exports = { savePost, viewPosts, deleteThisPost };
+function editThisPost(index, postDetails) {
+  if (fs.existsSync(filename)) {
+    const data = fs.readFileSync(filename, "utf-8");
+
+    if (data.trim().length === 0) {
+      console.log("No available post to edit.");
+    }
+
+    const posts = JSON.parse(data);
+    const postIndex = index - 1;
+
+    if (postIndex < 0 || postIndex >= posts.length) {
+      console.log(
+        "A post with this number does not exist.\nPerharps, check the posts list and try again.\n"
+      );
+      return;
+    }
+  }
+}
+
+module.exports = { savePost, viewPosts, deleteThisPost, editThisPost };

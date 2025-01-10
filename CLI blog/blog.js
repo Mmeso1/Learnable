@@ -1,4 +1,9 @@
-const { savePost, viewPosts, deleteThisPost } = require("./functions");
+const {
+  savePost,
+  viewPosts,
+  deleteThisPost,
+  editThisPost,
+} = require("./functions");
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -33,12 +38,35 @@ const createPost = async () => {
   }
 };
 
-const editPost = async () => {};
+const editPost = async () => {
+  try {
+    const postNum = await askQuestion(
+      "\nEnter the number of the post to edit: "
+    );
+    const index = parseInt(postNum, 10);
+
+    if (isNaN(index) || index < 1) {
+      console.log("Invalid input. Please enter a valid number.");
+    } else {
+      console.log("Press enter to skip a value you do not want to replace");
+      const title = await askQuestion("> Enter the new blog's title: ");
+      const image = await askQuestion(
+        "> Enter the new url to the blog's image if any: "
+      );
+      const content = await askQuestion("> Enter the new content: ");
+      const author = await askQuestion("> Enter the new author: ");
+      let postDetails = { title, image, content, author };
+      editThisPost(index, postDetails);
+    }
+  } catch (error) {
+    console.log("What went wrong: ", error);
+  }
+};
 
 const deletePost = async () => {
   try {
     const postNum = await askQuestion(
-      "Enter the number of the post to delete: "
+      "\nEnter the number of the post to delete: "
     );
     const index = parseInt(postNum, 10);
 
@@ -48,7 +76,7 @@ const deletePost = async () => {
       deleteThisPost(index);
     }
   } catch (error) {
-    console.log("What went wrong:", error);
+    console.log("What went wrong: ", error);
   }
 };
 
@@ -57,19 +85,15 @@ rl.on("line", (input) => {
   switch (input.trim()) {
     case "1":
       viewPosts();
-      displayMenu();
       break;
     case "2":
       createPost();
-      displayMenu();
       break;
-    case "4":
+    case "3":
       editPost();
-      displayMenu();
       break;
     case "4":
       deletePost();
-      displayMenu();
       break;
     case "5":
       console.log("Exit");
