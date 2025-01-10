@@ -81,19 +81,23 @@ const deletePost = async () => {
 };
 
 // switch function to perform actions based on user input
-rl.on("line", (input) => {
+const handleInput = async (input) => {
   switch (input.trim()) {
     case "1":
       viewPosts();
+      displayMenu();
       break;
     case "2":
-      createPost();
+      await createPost();
+      displayMenu();
       break;
     case "3":
-      editPost();
+      await editPost();
+      displayMenu();
       break;
     case "4":
-      deletePost();
+      await deletePost();
+      displayMenu();
       break;
     case "5":
       console.log("Exit");
@@ -102,9 +106,10 @@ rl.on("line", (input) => {
     default:
       console.log("Invalid choice");
   }
-});
+};
 
-rl.write("Welcome to the CLI blog!\n");
+rl.on("line", handleInput);
+console.log("Welcome to the CLI blog!");
 displayMenu();
 
 //I put these at the bottom of the file so that the program can go through the functions before the user can interact with it.
