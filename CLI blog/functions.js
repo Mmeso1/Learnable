@@ -70,10 +70,14 @@ function deleteThisPost(index) {
       return;
     }
 
-    const deletedPost = posts.splice(postIndex, 1);
-    fs.writeFileSync(filename, JSON.stringify(posts, null, 2));
-    console.log(`Deleted post: "${deletedPost[0].title}"`);
-    console.log("\nPost deleted successfully\n");
+    try {
+      const deletedPost = posts.splice(postIndex, 1);
+      fs.writeFileSync(filename, JSON.stringify(posts, null, 2));
+      console.log(`Deleted post: "${deletedPost[0].title}"`);
+      console.log("\nPost deleted successfully\n");
+    } catch (error) {
+      console.log("An error occurred while saving the updated post:", error);
+    }
   }
 }
 
@@ -93,6 +97,21 @@ function editThisPost(index, postDetails) {
         "A post with this number does not exist.\nPerharps, check the posts list and try again.\n"
       );
       return;
+    }
+
+    const post = posts[postIndex];
+    // Update only the provided fields
+    post.title = postDetails.title || post.title;
+    post.image = postDetails.image || post.image;
+    post.content = postDetails.content || post.content;
+    post.author = postDetails.author || post.author;
+
+    try {
+      fs.writeFileSync(filename, JSON.stringify(posts, null, 2));
+      console.log(`Edited post: ${posts[postIndex]}`);
+      console.log("\nPost updated successfully!");
+    } catch (error) {
+      console.log("An error occurred while saving the updated post:", error);
     }
   }
 }
