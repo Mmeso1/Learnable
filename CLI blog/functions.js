@@ -1,5 +1,5 @@
 const fs = require("fs");
-const filename = "posts.json";
+const filename = "./CLI_blog/posts.json";
 
 function savePost(title, image, content, author) {
   //Create an empty array so as read existing data in the json file and store it in posts
@@ -32,7 +32,7 @@ function viewPosts() {
   if (fs.existsSync(filename)) {
     const data = fs.readFileSync(filename, "utf8");
 
-    if (data.trim().length > 0) {
+    if (data.trim().length > 0 && data.trim() !== "[]") {
       posts = JSON.parse(data);
       console.log(`\n=== Blog Posts ===`);
       posts.forEach((post, index) => {
