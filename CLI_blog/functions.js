@@ -14,6 +14,11 @@ function savePost(title, image, content, author) {
     }
   }
 
+  if (!title && !image && !content && !author) {
+    console.log("Empty blog not created\n");
+    return;
+  }
+
   posts.push({
     id: Date.now(),
     title,
