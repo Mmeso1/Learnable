@@ -1,0 +1,15 @@
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/bin/Debug/net9.0/app
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/bin/Debug/net9.0/app.deps.json
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/bin/Debug/net9.0/app.runtimeconfig.json
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/bin/Debug/net9.0/app.dll
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/bin/Debug/net9.0/app.pdb
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/app.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/app.AssemblyInfoInputs.cache
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/app.AssemblyInfo.cs
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/app.csproj.CoreCompileInputs.cache
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/app.sourcelink.json
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/app.dll
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/refint/app.dll
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/app.pdb
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/app.genruntimeconfig.cache
+/Users/dr.chika/Desktop/Learnable/Objects_and_Classes/app/obj/Debug/net9.0/ref/app.dll
