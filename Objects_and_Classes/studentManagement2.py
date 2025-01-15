@@ -18,10 +18,10 @@ class Course:
 class Admin:  
     def __init__(self):
         self.existing_courses = {
-        "MATH101": {"name": "Math", "topics": ["Algebra", "Geometry", "Calculus"]},
-        "SCI101": {"name": "Science", "topics": ["Soil", "Air", "Pollution"]},
-        "ENG101": {"name": "English", "topics": ["Grammar", "Literature", "Writing"]},
-        "HIST101": {"name": "History", "topics": ["World War I", "Renaissance", "Cold War"]}
+        "FRONT101": {"name": "Frontend Development", "topics": ["HTML", "CSS", "JavaScript"]},
+        "BACK101": {"name": "Backend Development", "topics": ["Python", "Django", "REST APIs"]},
+        "DATA101": {"name": "Data Analysis", "topics": ["Pandas", "NumPy", "Data Visualization"]},
+        "ML101": {"name": "Machine Learning", "topics": ["Supervised Learning", "Unsupervised Learning", "Neural Networks"]}
         }  # Store courses in a dictionary
 
     # Method to add a course
@@ -65,7 +65,7 @@ class Student:
     def __init__(self):
         self.first_name = ""
         self.last_name = ""
-        self.enrolled_course_code = ""
+        self.enrolled_course = ""
 
     # Method to register a student
     def register(self, first_name, last_name, enrolled_course):
@@ -104,12 +104,14 @@ if __name__ == "__main__":
     admin = Admin()
     print("\n- Creating new Course Objects....")
     course1 = Course("Art", "ART101")
+    course3 = Course("UI/UX Design", "UIUX101")
     course2 = Course("Science", "SCI101")
 
     # Add topics to courses
     print("\n- Adding topics to new Course Objects")
     course1.add_topic("Painting", "Drawing", "Drama")
-    course2.add_topic("Soil", "Air", "Pollution")
+    course3.add_topic("Wireframing", "Prototyping", "User Research")
+    course2.add_topic("Soil")
 
     # Add courses to the admin
     print("\n- Admin adding the created Courses Objects")
@@ -123,9 +125,9 @@ if __name__ == "__main__":
     # Register students
     print("\n- A student registering to a course")
     student1 = Student()
-    student1.register("Mmesoma", "Okeke", "Math")
+    student1.register("Mmesoma", "Okeke", "Frontend Development")
     student2 = Student()
-    student2.register("Chidinma", "Okolo", "English")
+    student2.register("Chidinma", "Okolo", "Backend Development")
 
     # View enrolled students
     print("\n- Admin viewing the registered students")
@@ -133,6 +135,6 @@ if __name__ == "__main__":
 
     # Remove a course
     print("\n- Admin removing a course from the existing courses")
-    admin.remove_course("MATH101")
+    admin.remove_course("FRONT101")
     print("\n- Admin viewing the remaining courses\n")
     admin.list_courses()
