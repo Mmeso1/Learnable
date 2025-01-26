@@ -74,3 +74,9 @@ form textarea {
 form textarea[placeholder] {
   padding: 5px;
 }
+
+@media screen and (max-width: 760px) {
+  .container {
+    width: 90%;
+  }
+}
