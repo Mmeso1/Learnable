@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #5dabee;
+}
+
+.container header {
+  font-family: "Palette Mosaic", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+form label {
+  font-family: "Red Hat Display", serif;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+form input,
+form select {
+  opacity: 0.7;
+}
+
+form input,
+form button,
+form select {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+form button {
+  background: #051522;
+  font-size: 15px;
+}
+
+form button span {
+  font-family: "Poppins", serif;
+  color: #fff;
+}
+
+form textarea {
+  margin-top: 10px;
+}
+
+form textarea[placeholder] {
+  padding: 5px;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    width: 90%;
+  }
+}
