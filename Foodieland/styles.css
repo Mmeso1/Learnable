@@ -190,3 +190,88 @@ header .center-decor .divider-image {
   top: 200px;
   right: 43%;
 }
+
+/* CATEGORIES */
+.category {
+  margin: 8rem 6rem;
+  padding-bottom: 4rem; /*remember to remove this*/
+}
+
+.category .category-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.category .category-title p:first-child {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58.09px;
+}
+
+.category .category-title button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.36px;
+  background-color: rgba(231, 250, 254, 1);
+  height: auto;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  border: none;
+}
+
+.category .category-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category .category-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 170px;
+  padding-bottom: 20px;
+
+  border-radius: 0px 0px 30px 30px;
+}
+
+.category .category-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(rgba(112, 130, 70, 0), rgba(112, 130, 70, 0.1));
+  border-radius: 0px 0px 30px 30px;
+}
+
+.category .category-card p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.78px;
+}
+
+#category-card-2 {
+  background: linear-gradient(rgba(108, 198, 63, 0), rgba(108, 198, 63, 0.1));
+}
+#category-card-3 {
+  background: linear-gradient(rgba(204, 38, 27, 0), rgba(204, 38, 27, 0.1));
+}
+#category-card-4 {
+  background: linear-gradient(rgba(240, 158, 0, 0), rgba(240, 158, 0, 0.1));
+}
+#category-card-5,
+#category-card-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
+}
+.category .category-card img {
+  position: relative;
+}
+.category .category-card .blur {
+  position: absolute;
+  left: 40px;
+  top: 5px;
+}
