@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Exodus Sans";
+  src: url("font/eudoxus-sans-font-family-1738301395-0/EudoxusSans-Regular-BF659b6cb1d4714.ttf");
+}
+
 body {
   font-family: "Inter", serif;
   height: 100vh;
@@ -706,8 +711,8 @@ footer > div:first-child div:first-child img {
 
 footer > div:first-child p {
   color: rgba(0, 0, 0, 0.6);
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: 16px;
+  margin-top: 15px;
 }
 
 footer ul {
@@ -719,7 +724,7 @@ footer ul {
 footer ul li a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
-  font-size: 14px;
+  font-size: 16px;
   transition: 0.3s ease;
 }
 
@@ -727,13 +732,17 @@ footer ul li a:hover {
   color: rgba(0, 0, 0, 1);
 }
 
-footer > div:last-child {
+footer .lower-half {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  font-size: 14px;
+  margin-top: 50px;
+  font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
+}
+
+footer .lower-half p {
+  font-family: "Exodus Sans", sans-serif;
+  margin: 0 auto;
 }
 
 footer .lower-half span {
@@ -743,6 +752,8 @@ footer .lower-half span {
 
 footer .lower-half .base-socials {
   display: flex;
-  gap: 20px;
-  align-self: end;
+  gap: 40px;
+}
+footer .lower-half .base-socials img {
+  height: 20px;
 }
