@@ -61,10 +61,72 @@
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
   width: 73%;
-  padding: 2.5rem 0;
+  padding: 3.5rem 0;
 }
 
 .blog-header img {
   height: auto;
   border-radius: 30px;
+}
+
+.articles {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  gap: 6rem;
+}
+
+article h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29.05px;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+}
+
+article p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.articles aside.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.articles aside.socials p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.94px;
+  letter-spacing: 0.1em;
+  color: rgba(0, 0, 0, 1);
+}
+
+.quote {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 64px;
+  letter-spacing: -0.04em;
+  padding: 2rem;
+
+  border: 2px solid rgb(238, 238, 238);
+  border-right: none;
+  border-left: none;
 }
