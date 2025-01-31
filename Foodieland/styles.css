@@ -680,3 +680,69 @@ header .center-decor .divider-image {
   bottom: 70px;
   right: 250px;
 }
+
+/* FOOTER */
+footer {
+  margin-top: 6rem;
+  padding: 40px 5%;
+}
+
+footer > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); /* Demarcator line */
+}
+
+footer > div:first-child div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > div:first-child div:first-child img {
+  width: 110px;
+}
+
+footer > div:first-child p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+footer > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+footer .lower-half span {
+  font-weight: bold;
+  color: rgb(255 121 103);
+}
+
+footer .lower-half .base-socials {
+  display: flex;
+  gap: 20px;
+  align-self: end;
+}
