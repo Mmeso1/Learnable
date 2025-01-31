@@ -349,7 +349,8 @@ header .center-decor .divider-image {
   margin-top: 10px;
 }
 
-.recipe-samples .recipe-cards {
+.recipe-samples .recipe-cards,
+.try-recipe .try-recipe-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -371,7 +372,8 @@ header .center-decor .divider-image {
   position: relative;
 }
 
-.recipe-samples .recipe-card .card-top img {
+.recipe-samples .recipe-card .card-top img,
+.try-recipe .try-recipe-cards .card-top img {
   border-radius: 30px;
 }
 
@@ -397,14 +399,17 @@ header .center-decor .divider-image {
   margin-bottom: 30px;
 }
 
-.recipe-samples .recipe-card .card-detail .details {
+.recipe-samples .recipe-card .card-detail .details,
+.try-recipe .try-recipe-cards .card-detail .details {
   display: flex;
   gap: 30px;
   padding-bottom: 20px;
 }
 
 .recipe-samples .recipe-card .card-detail .details .time,
-.recipe-samples .recipe-card .card-detail .details .meal {
+.recipe-samples .recipe-card .card-detail .details .meal,
+.try-recipe .try-recipe-cards .card-detail .details .time,
+.try-recipe .try-recipe-cards .card-detail .details .meal {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -524,4 +529,61 @@ header .center-decor .divider-image {
   font-size: 14px;
   line-height: 16.94px;
   font-weight: 500;
+}
+
+/* TRY RECIPE */
+.try-recipe {
+  margin: 8rem 4rem;
+  padding-bottom: 4rem; /*remember to remove this*/
+}
+
+.try-recipe .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.try-recipe .title p:first-child {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58.09px;
+}
+
+.try-recipe .title p:last-child {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+}
+
+/* original style from recipe section */
+.try-recipe .try-recipe-cards {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.try-recipe .try-recipe-cards .recipe-card {
+  width: 290px;
+}
+
+.try-recipe .try-recipe-cards .card-top {
+  position: relative;
+}
+.try-recipe .try-recipe-cards .card-top .heart {
+  position: absolute;
+  top: 10px;
+  left: 220px;
+  background: rgba(255, 255, 255, 1);
+  padding: 15px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.try-recipe .try-recipe-cards .card-detail > p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
