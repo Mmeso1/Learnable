@@ -137,7 +137,8 @@ nextBtn.addEventListener("click", () => {
 // Function to end the quiz
 function endQuiz() {
   clearInterval(updateTimer);
-  localStorage.setItem("score", score);
+  calculateScore();
+  localStorage.setItem("quizScore", score);
   window.location.href = "result.html";
 }
 

@@ -3,7 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz Results</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #d1d8fa; /* Light Theme */
+      }
+
+      .result-container {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 400px;
+      }
+
+      h1 {
+        color: #6b63ff; /* Theme Dark Color */
+        font-size: 2rem;
+      }
+
+      .score {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #6b63ff; /* Theme Dark Color */
+        margin: 1rem 0;
+      }
+
+      .message {
+        font-size: 1.2rem;
+        color: #444;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        background-color: #6b63ff;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #574bd6;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="result-container">
+      <h1>Quiz Completed!</h1>
+      <p class="score">Score: <span id="score"></span>/10</p>
+      <p class="message" id="result-message"></p>
+      <button class="btn" onclick="restartQuiz()">Try Again</button>
+    </div>
+
+    <script>
+      // Retrieve the score from localStorage
+      const score = localStorage.getItem("quizScore") || 0;
+      document.getElementById("score").textContent = score;
+
+      // Display message based on performance
+      const message = document.getElementById("result-message");
+      if (score == 10) {
+        message.textContent = "Perfect! You're a pro!";
+      } else if (score >= 7) {
+        message.textContent = "Great job! Almost perfect!";
+      } else if (score >= 5) {
+        message.textContent = "Nice work! Keep practicing!";
+      } else {
+        message.textContent = "Don't worry, try again!";
+      }
+
+      function restartQuiz() {
+        localStorage.removeItem("quizScore"); // Clear score
+        window.location.href = "index.html"; // Redirect to quiz start
+      }
+    </script>
+  </body>
 </html>
