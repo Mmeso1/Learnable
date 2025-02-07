@@ -5,39 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <section class="left-section">
-      <div class="timer">00:56</div>
-      <div class="mid-section">
-        <p class="progress-indicator">1/10</p>
-        <h1 class="question">What is CSS?</h1>
-        <p class="instruction">Select one answer</p>
-      </div>
-      <div class="day">Sunday</div>
-    </section>
-    <section class="right-section">
-      <img src="assets/illustration.svg" alt="illustration" />
-      <section class="right-section">
-        <form action="#">
-          <div>
-            <input id="option1" name="quiz-option" type="radio" />
-            <label for="option1">Cascading Style Sheets</label>
-          </div>
-          <div>
-            <input id="option2" name="quiz-option" type="radio" />
-            <label for="option2">Cascading Style Scripts</label>
-          </div>
-          <div>
-            <input id="option3" name="quiz-option" type="radio" />
-            <label for="option3">Cascading Style Syntax</label>
-          </div>
-          <div>
-            <input id="option4" name="quiz-option" type="radio" />
-            <label for="option4">Cascading Style System</label>
-          </div>
-        </form>
+  <body class="quiz-body">
+    <div class="quiz-subcon">
+      <section class="left-section">
+        <div class="timer">00:56</div>
+        <div class="mid-section">
+          <p class="progress-indicator">
+            No. <span id="question-id">1</span>/10
+          </p>
+          <h1 class="question">What is CSS?</h1>
+          <p class="instruction">Select one answer</p>
+        </div>
+        <div class="day">Sunday</div>
       </section>
-    </section>
+      <section class="right-section">
+        <img src="assets/illustration.svg" alt="illustration" />
+        <section class="form">
+          <form action="#">
+            <div>
+              <input id="option1" name="quiz-option" type="radio" />
+              <label for="option1">Cascading Style Sheets</label>
+            </div>
+            <div>
+              <input id="option2" name="quiz-option" type="radio" />
+              <label for="option2">Cascading Style Scripts</label>
+            </div>
+            <div>
+              <input id="option3" name="quiz-option" type="radio" />
+              <label for="option3">Cascading Style Syntax</label>
+            </div>
+            <div>
+              <input id="option4" name="quiz-option" type="radio" />
+              <label for="option4">Cascading Style System</label>
+            </div>
+          </form>
+        </section>
+      </section>
+    </div>
   </body>
 </html>
