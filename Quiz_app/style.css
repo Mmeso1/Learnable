@@ -180,8 +180,15 @@ body {
   cursor: pointer;
 }
 
+.page-content .left-section .bottom-section button a {
+  text-decoration: none;
+  color: #ffffff;
+}
 .page-content .left-section .bottom-section button:hover {
   background-color: #ffffff;
+}
+
+.page-content .left-section .bottom-section button:hover a {
   color: var(--primary-color);
 }
 
@@ -234,13 +241,17 @@ body {
     padding: 0.8rem 1.5rem;
     font-size: var(--large-font-size);
     background-color: var(--primary-color);
-    color: #ffffff;
     padding: 1rem 2rem;
     border: none;
     border-radius: 30px;
     cursor: pointer;
     margin-left: 0.7rem;
     margin-top: 1.3rem;
+  }
+
+  .page-content .right-section button a {
+    text-decoration: none;
+    color: #ffffff;
   }
 }
 

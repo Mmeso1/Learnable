@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      #countdown-screen,
+      #quiz-page {
+        text-align: center;
+        font-size: 2rem;
+      }
+      #countdown-screen {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #1e1e1e;
+        font-family: "Poppins", sans-serif;
+      }
+      #countdown {
+        font-size: 5rem;
+        font-weight: bold;
+        display: inline-block;
+        animation: scaleEffect 1s infinite ease-in-out;
+      }
+
+      /* Scaling Animation */
+      @keyframes scaleEffect {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.4);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+    <script src="countdown.js" defer></script>
+  </head>
+  <body>
+    <div id="countdown-screen">
+      <h1>Starting in!</h1>
+      <p id="countdown"></p>
+      <!-- <audio id="countdown-audio" src="assets/countdown-beep.mp3"></audio> -->
+    </div>
+  </body>
+</html>
