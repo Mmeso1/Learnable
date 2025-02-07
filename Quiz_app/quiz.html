@@ -3,13 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Quiz Page (Initially Hidden) -->
-    <div id="quiz-page" class="hidden">
-      <h1>Welcome to the Quiz!</h1>
-      <!-- Quiz content here -->
-    </div>
+    <section class="left-section">
+      <div class="timer">00:56</div>
+      <div class="mid-section">
+        <p class="progress-indicator">1/10</p>
+        <h1 class="question">What is CSS?</h1>
+        <p class="instruction">Select one answer</p>
+      </div>
+      <div class="day">Sunday</div>
+    </section>
+    <section class="right-section">
+      <img src="assets/illustration.svg" alt="illustration" />
+      <section class="right-section">
+        <form action="#">
+          <div>
+            <input id="option1" name="quiz-option" type="radio" />
+            <label for="option1">Cascading Style Sheets</label>
+          </div>
+          <div>
+            <input id="option2" name="quiz-option" type="radio" />
+            <label for="option2">Cascading Style Scripts</label>
+          </div>
+          <div>
+            <input id="option3" name="quiz-option" type="radio" />
+            <label for="option3">Cascading Style Syntax</label>
+          </div>
+          <div>
+            <input id="option4" name="quiz-option" type="radio" />
+            <label for="option4">Cascading Style System</label>
+          </div>
+        </form>
+      </section>
+    </section>
   </body>
 </html>
