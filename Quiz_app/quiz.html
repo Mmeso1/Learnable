@@ -15,39 +15,44 @@
   <body class="quiz-body">
     <div class="quiz-subcon">
       <section class="left-section">
-        <div class="timer">00:56</div>
+        <div id="timer" class="timer">10:00</div>
         <div class="mid-section">
           <p class="progress-indicator">
             No. <span id="question-id">1</span>/10
           </p>
-          <h1 class="question">What is CSS?</h1>
+          <h1 id="question-text" class="question">What is CSS?</h1>
           <p class="instruction">Select one answer</p>
         </div>
-        <div class="day">Sunday</div>
+        <div id="day" class="day">Sunday</div>
       </section>
       <section class="right-section">
         <img src="assets/illustration.svg" alt="illustration" />
         <section class="form">
-          <form action="#">
-            <div>
+          <form id="quiz-form">
+            <div class="option">
               <input id="option1" name="quiz-option" type="radio" />
-              <label for="option1">Cascading Style Sheets</label>
+              <label for="option1"></label>
             </div>
-            <div>
+            <div class="option">
               <input id="option2" name="quiz-option" type="radio" />
-              <label for="option2">Cascading Style Scripts</label>
+              <label for="option2"></label>
             </div>
-            <div>
+            <div class="option">
               <input id="option3" name="quiz-option" type="radio" />
-              <label for="option3">Cascading Style Syntax</label>
+              <label for="option3"></label>
             </div>
-            <div>
+            <div class="option">
               <input id="option4" name="quiz-option" type="radio" />
-              <label for="option4">Cascading Style System</label>
+              <label for="option4"></label>
             </div>
           </form>
         </section>
+        <div class="navigators">
+          <button id="prev-btn">Prev</button>
+          <button id="next-btn">Next</button>
+        </div>
       </section>
     </div>
   </body>
+  <script src="scripts/quiz.js"></script>
 </html>
