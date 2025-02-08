@@ -24,7 +24,7 @@ This is a simple Quiz Application built to demonstrate basic functionalities of 
 
 ## Usage
 
-Link to the deployed app is
+Link to the deployed app is https://github.com/Mmeso1/Learnable/tree/main/Quiz_app
 
 ## Contact
 
