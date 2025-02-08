@@ -248,6 +248,10 @@ body {
     width: 80%;
   }
 
+  .page-content .left-section {
+    padding-left: 0;
+  }
+
   .page-content .left-section .top-section img {
     height: 35px;
     width: 35px;

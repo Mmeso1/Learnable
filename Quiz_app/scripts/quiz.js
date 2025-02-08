@@ -163,8 +163,7 @@ function updateTimer() {
     timeLeft--;
     setTimeout(updateTimer, 1000);
   } else {
-    calculateScore();
-    alert(`Time's up! Your score: ${score}/10`);
+    endQuiz();
   }
 }
 
