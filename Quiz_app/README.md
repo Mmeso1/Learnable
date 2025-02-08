@@ -22,7 +22,7 @@ This is a simple Quiz Application built to demonstrate basic functionalities of 
 
 ## Usage
 
-Link to the deployed app is Quizzs [https://quizzs.onrender.com]
+Link to the deployed app is [https://quizzs.onrender.com]
 
 ## Contact
 
