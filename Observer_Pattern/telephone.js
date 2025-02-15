@@ -48,7 +48,7 @@ class Observer {
   }
 
   notify(phone_number) {
-    // console.log("Observer notfied that there is dialing in progress");
+    console.log("Observer notfied that there is dialing in progress");
     this.action(phone_number); //calling the action when notify is called
   }
 }
@@ -67,5 +67,5 @@ var Observer2 = new Observer((phone_number) => {
 
 telephone.addObserver(Observer1);
 telephone.addObserver(Observer2);
-telephone.notifyObservers();
+// telephone.notifyObservers();
 telephone.DialPhoneNumber("2347023232");
