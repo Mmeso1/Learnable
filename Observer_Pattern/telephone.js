@@ -42,14 +42,13 @@ class Telephone {
 }
 
 class Observer {
-  constructor(name, action) {
-    this.name = name;
-    //passing in the action or function i want to be done
+  //the action or function i want to be done will be passed into the constructor by the observer object
+  constructor(action) {
     this.action = action; //storing the action in the observer
   }
 
   notify(phone_number) {
-    console.log(`${this.name} notfied that there is dialing in progress`);
+    console.log(`This Observer is being notfied`);
     this.action(phone_number); //calling the action when notify is called
   }
 }
@@ -58,11 +57,11 @@ var telephone = new Telephone();
 telephone.AddPhoneNumber("2347023232");
 telephone.AddPhoneNumber("2347023233");
 
-var Observer1 = new Observer("Observer1", (phone_number) => {
+var Observer1 = new Observer((phone_number) => {
   console.log(phone_number);
 });
 
-var Observer2 = new Observer("Observer2", (phone_number) => {
+var Observer2 = new Observer((phone_number) => {
   console.log(`Now Dialling ${phone_number}`);
 });
 
