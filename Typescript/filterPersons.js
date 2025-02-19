@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.adminsOfAge23 = exports.usersOfAge23 = exports.persons = void 0;
+exports.adminsOfRoleWorldSaver = exports.adminsOfAge23 = exports.usersOfAge23 = exports.persons = void 0;
 exports.logPerson = logPerson;
 exports.filterPersons = filterPersons;
 exports.persons = [
@@ -31,8 +31,13 @@ function filterPersons(persons, personType, criteria) {
 }
 exports.usersOfAge23 = filterPersons(exports.persons, "user", { age: 23 });
 exports.adminsOfAge23 = filterPersons(exports.persons, "admin", { age: 23 });
+exports.adminsOfRoleWorldSaver = filterPersons(exports.persons, "admin", {
+    role: "World saver",
+});
 console.log("Users of age 23:");
 exports.usersOfAge23.forEach(logPerson);
 console.log();
 console.log("Admins of age 23:");
 exports.adminsOfAge23.forEach(logPerson);
+console.log();
+exports.adminsOfRoleWorldSaver.forEach(logPerson);

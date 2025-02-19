@@ -63,6 +63,9 @@ export function filterPersons(
 
 export const usersOfAge23 = filterPersons(persons, "user", { age: 23 });
 export const adminsOfAge23 = filterPersons(persons, "admin", { age: 23 });
+// export const adminsOfRoleWorldSaver = filterPersons(persons, "admin", {
+//   role: "World saver",
+// });
 
 console.log("Users of age 23:");
 usersOfAge23.forEach(logPerson);
@@ -71,3 +74,6 @@ console.log();
 
 console.log("Admins of age 23:");
 adminsOfAge23.forEach(logPerson);
+
+// console.log();
+// adminsOfRoleWorldSaver.forEach(logPerson);
