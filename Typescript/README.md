@@ -45,3 +45,26 @@ The `Omit<T, K>` utility type creates a new type by taking `T` and removing the 
 ## Code Example
 
 You can see the implementation of that in the filterPersons function in my filterPersons.tsx file
+
+## RUN COMMANDS
+
+To run the file
+
+- 1. ### Install Dependencies:
+     Ensure you have Node.js and npm (or yarn) installed. Run the following command in your project directory:
+
+```bash
+npm install
+```
+
+- 2. Compile TypeScript: Compile the TypeScript code to JavaScript using the TypeScript compiler.
+
+```bash
+npx tsc filterPersons.tsx  // Replace filterPersons.tsx with your file name
+```
+
+- 3. Run JavaScript: Execute the compiled JavaScript file using Node.js:
+
+```bash
+node filterPersons.js   // Replace filterPersons.js with the compiled file name
+```
