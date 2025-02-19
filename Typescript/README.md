@@ -14,6 +14,29 @@ If personType is 'user', the criteria argument should accept a partial User obje
 If personType is 'admin', the criteria argument should accept a partial Admin object.
 The criteria object should exclude the type field (i.e., you should not allow filtering by the type property).
 
+## RUN COMMANDS
+
+To run the file
+
+- 1. ### Install Dependencies:
+     Ensure you have Node.js and npm (or yarn) installed. Run the following command in your project directory:
+
+```bash
+npm install
+```
+
+- 2. Compile TypeScript: Compile the TypeScript code to JavaScript using the TypeScript compiler.
+
+```bash
+npx tsc filterPersons.tsx  // Replace filterPersons.tsx with your file name
+```
+
+- 3. Run JavaScript: Execute the compiled JavaScript file using Node.js:
+
+```bash
+node filterPersons.js   // Replace filterPersons.js with the compiled file name
+```
+
 # Type-Safe Filtering with TypeScript Overloads and Utility Types
 
 This project demonstrates how to create a type-safe filtering function in TypeScript using function overloads, `Partial`, and `Omit` utility types. It provides a clear example of how to ensure type correctness while maintaining flexibility in function usage.
@@ -45,26 +68,3 @@ The `Omit<T, K>` utility type creates a new type by taking `T` and removing the 
 ## Code Example
 
 You can see the implementation of that in the filterPersons function in my filterPersons.tsx file
-
-## RUN COMMANDS
-
-To run the file
-
-- 1. ### Install Dependencies:
-     Ensure you have Node.js and npm (or yarn) installed. Run the following command in your project directory:
-
-```bash
-npm install
-```
-
-- 2. Compile TypeScript: Compile the TypeScript code to JavaScript using the TypeScript compiler.
-
-```bash
-npx tsc filterPersons.tsx  // Replace filterPersons.tsx with your file name
-```
-
-- 3. Run JavaScript: Execute the compiled JavaScript file using Node.js:
-
-```bash
-node filterPersons.js   // Replace filterPersons.js with the compiled file name
-```
