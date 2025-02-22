@@ -85,6 +85,7 @@ const timerDisplay = document.getElementById("timer");
 const day = document.getElementById("day");
 
 day.textContent = new Date().toLocaleDateString("en-US", { weekday: "long" });
+let unasweredAndWrongAnswers = [];
 
 // Function to load a question
 function loadQuestion() {
@@ -117,8 +118,16 @@ function saveAnswer() {
 function calculateScore() {
   score = 0;
   Object.entries(selectedOptions).forEach(([questionIndex, selectedIndex]) => {
-    if (quizData[questionIndex].correct === selectedIndex) {
+    const question = quizData[questionIndex];
+    if (question.correct === selectedIndex) {
+      console.log("Quiz ended");
       score++;
+    } else {
+      unasweredAndWrongAnswers.push({
+        question: question.question,
+        selectedAnswer: question.options[selectedIndex],
+        correctAnswer: question.options[question.correct],
+      });
     }
   });
 }
@@ -130,15 +139,39 @@ nextBtn.addEventListener("click", () => {
     currentQuestion++;
     loadQuestion();
   } else {
+    saveAnswer(); // Ensure the last answer is saved
     endQuiz();
   }
 });
 
 // Function to end the quiz
 function endQuiz() {
+  const unansweredQuestions = quizData.filter(
+    (_, index) => !(index in selectedOptions)
+  );
+
+  if (unansweredQuestions.length > 0) {
+    let userResponse = confirm(
+      "You have unanswered questions. Are you sure you want to submit?"
+    );
+    if (!userResponse) {
+      return;
+    }
+  }
+
   clearInterval(updateTimer);
+  unansweredQuestions.forEach((question) => {
+    unasweredAndWrongAnswers.push({
+      question: question.question,
+      selectedAnswer: "Not answered",
+      correctAnswer: question.options[question.correct],
+    });
+  });
+
   calculateScore();
   localStorage.setItem("quizScore", score);
+  localStorage.setItem("Correction", JSON.stringify(unasweredAndWrongAnswers));
+  console.log("Correction", unasweredAndWrongAnswers);
   window.location.href = "result.html";
 }
 

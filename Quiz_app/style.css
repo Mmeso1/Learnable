@@ -437,6 +437,19 @@ body {
   background-color: #6b63ff; /* Dark center when selected */
 }
 
+.quiz-subcon .form .option,
+.quiz-subcon .form .option label {
+  cursor: pointer;
+}
+
+.quiz-subcon .form .option:hover {
+  background-color: #e5d4fb;
+}
+
+.quiz-subcon .form div:not(:has(input[type="radio"]:checked)):hover {
+  color: #4b4b4b;
+}
+
 .navigators button {
   margin: 0.5rem;
   padding: 1rem 2rem;
@@ -446,6 +459,12 @@ body {
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .quiz-subcon .form .option:hover {
+    background: none;
+  }
 }
 
 /* Responsivenes */
