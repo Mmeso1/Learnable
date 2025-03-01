@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* Fonts */
+.ubuntu-light {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.soft-red {
+  background-color: #ff6b6b;
+}
+.soft-blue {
+  background-color: #6baed6;
+}
+.soft-purple {
+  background-color: #a586c0;
+}
+.soft-green {
+  background-color: #77dd77;
+}
+
+/* html,
+body {
+  height: 100%;
+  overflow: auto;
+} */
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #5a5a5a;
+}
+
+.header i.fa-solid.fa-plus {
+  font-size: 1.5rem;
+  color: #5a5a5a;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  gap: 2rem;
+  /* height: 100vh; */
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar .tags .tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: hidden;
+  background-color: #fff;
+  cursor: pointer;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  color: #5a5a5a;
+}
+
+.sidebar .tags .tag:hover {
+  transform: scale(1.1);
+}
+
+.sidebar .tags .tag span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.sidebar .hide-done-tasks {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.sidebar .hide-done-tasks input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.sidebar .hide-done-tasks input,
+.sidebar .hide-done-tasks label {
+  color: #7a7a7a;
+}
+
+.sidebar .bottom-man {
+  height: auto;
+  width: 13rem;
+}
+
+/* MAIN BODY */
+.main-body {
+  flex: 1;
+  width: 100%;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 2rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-right: 1rem;
+  margin-bottom: auto;
+}
+
+/* For Firefox */
+.notes {
+  scrollbar-width: thin; /* Makes it thin */
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Thumb and track color */
+}
+/* ----------------- */
+
+.note {
+  background-color: rgba(255, 244, 181, 0.5);
+  padding: 1rem;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.note .top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #5a5a5a;
+}
+
+.note .top h1 {
+  font-weight: 500;
+}
+.note .top i.fa-solid.fa-ellipsis {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.dialog-box {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+  display: none;
+  width: 150px;
+}
+
+.dialog-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 5px;
+  width: 100%;
+  text-align: left;
+  color: #9a9a9a;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.dialog-box button:hover {
+  background-color: #f5f5f5;
+}
+
+.dialog-box button:first-child {
+  border-bottom: 1px solid #f4eded;
+}
+
+.dialog-box.active {
+  display: block;
+}
+
+.note .description {
+  color: #5a5a5a;
+}
+
+.note .bottom {
+  display: flex;
+}
+
+.note .bottom .done {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  color: #5a5a5a;
+}
+
+.note .bottom .done input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: 1px solid #5a5a5a;
+  background-color: red;
+}
+
+/* .note .bottom .done input[type="checkbox" i] {
+  background-color: #5a5a5a;
+} */
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal Box */
+.modal {
+  background: white;
+  width: 550px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  padding: 20px;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+/* Buttons */
+.close-btn,
+.add-btn {
+  font-family: "Ubuntu", sans-serif;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.close-btn {
+  color: #7a7a7a;
+}
+
+.add-btn {
+  color: #fff;
+  background-color: #5a5a5a;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+/* MODAL BODY */
+.modal-body {
+  margin-top: 2rem;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-body label {
+  font-size: 17px;
+  font-weight: 600;
+  color: #3a3a3a;
+  line-height: 1.5;
+}
+
+.modal-input,
+.modal-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-textarea {
+  height: 60px;
+}
+
+/* Tags */
+.modal-footer {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: lightgray;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+/* Show Modal */
+.show {
+  display: flex !important;
+}

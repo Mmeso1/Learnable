@@ -4,37 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <section class="header">
       <h1>todo</h1>
-      <img src="assets/plus.png" alt="plus" />
+      <i class="fa-solid fa-plus" id="open-modal"></i>
     </section>
-    <section class="sidebar">
-      <div class="tags">
-        <div class="tag">
-          <span></span>
-          <p>work</p>
+    <!-- Modal and Overlay -->
+    <div id="modalOverlay" class="modal-overlay show">
+      <div class="modal">
+        <div class="modal-header">
+          <button class="close-btn" id="closeModal">Cancel</button>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="tag">
-          <span></span>
-          <p>study</p>
+        <div class="modal-body">
+          <label for="Title">Title</label>
+          <input
+            type="text"
+            name="Title"
+            placeholder="add a title"
+            class="modal-input"
+          />
+          <label for="Description">Description</label>
+          <textarea
+            name="Description"
+            placeholder="Description"
+            class="modal-textarea"
+          ></textarea>
         </div>
-        <div class="tag">
-          <span></span>
-          <p>entertainment</p>
-        </div>
-        <div class="tag">
-          <span></span>
-          <p>family</p>
+        <div class="modal-footer">
+          <p>Tags:</p>
+          <span class="tag">Work</span>
+          <span class="tag">Personal</span>
+          <span class="tag">Urgent</span>
         </div>
       </div>
-      <div>
-        <input type="checkbox" />
-        <p>Hide Done Tasks</p>
-      </div>
-      <img src="assets/doodle-man.jpg" alt="chill doodle man" />
-    </section>
-    <section class="main-body"></section>
+    </div>
+    <div class="container">
+      <section class="sidebar">
+        <div>
+          <div class="tags">
+            <button class="tag">
+              <span class="soft-purple"></span>
+              <p>work</p>
+            </button>
+            <button class="tag">
+              <span class="soft-blue"></span>
+              <p>study</p>
+            </button>
+            <button class="tag">
+              <span class="soft-red"></span>
+              <p>entertainment</p>
+            </button>
+            <button class="tag">
+              <span class="soft-green"></span>
+              <p>family</p>
+            </button>
+          </div>
+          <div class="hide-done-tasks">
+            <input type="checkbox" name="filter-done-tasks" />
+            <label for="filter-done-tasks">Hide Done Tasks</label>
+          </div>
+        </div>
+        <img
+          class="bottom-man"
+          src="assets/doodle-man.jpg"
+          alt="chill doodle man"
+        />
+      </section>
+      <section class="main-body">
+        <div class="notes">
+          <div class="note">
+            <div class="top">
+              <h1 class="title">The first task title</h1>
+              <i class="fa-solid fa-ellipsis" id="menu-icon"></i>
+              <div class="dialog-box" id="dialog-box">
+                <button>Edit ...</button>
+                <button>Delete</button>
+              </div>
+            </div>
+            <div class="description">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                quia ea optio architecto nostrum. Quod!
+              </p>
+            </div>
+            <div class="bottom">
+              <!-- <div class="tags">
+                <button class="tag">
+                  <span class="soft-purple"></span>
+                  <p>work</p>
+                </button>
+                <button class="tag">
+                  <span class="soft-blue"></span>
+                  <p>study</p>
+                </button>
+              </div> -->
+              <div class="done">
+                <input type="checkbox" name="check-done-task" id="" />
+                <label for="check-done-task">Done</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
