@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* Fonts */
+.ubuntu-light {
+  font-family: "Ubuntu", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.soft-red {
+  color: #ff6b6b;
+}
+.soft-blue {
+  color: #6baed6;
+}
+.soft-purple {
+  color: #a586c0;
+}
+.soft-green {
+  color: #77dd77;
+}
+
+/* Landing */
+.landing-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.landing-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  max-height: 100vh;
+  border: 1px solid #5a5a5a;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 4rem 10rem;
+}
+
+@media screen and (max-width: 768px) {
+  .landing-section {
+    padding: 2rem 0rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landing-section {
+    border: none;
+  }
+}
+
+.title span {
+  opacity: 0.6;
+  font-size: 50px;
+}
+
+.landing-text {
+  color: #7a7a7a;
+  max-width: 500px;
+  margin-top: -2px;
+}
+
+.landing-get-started-button {
+  background-color: #5a5a5a;
+  padding: 12px 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.landing-get-started-button a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.landing-section-img {
+  image-orientation: from-image;
+  width: 50%;
+  height: 30%;
+  margin-top: 5rem;
+  margin-bottom: -1.4rem;
+}
+
+.single-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 5px;
+
+  background-color: rgba(255, 244, 181, 0.5);
+  max-width: 300px;
+  width: 100%;
+  height: 100px;
+}
+
+.single-note .top,
+.single-note .bottom {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.single-note .top {
+  justify-content: space-between;
+  color: #7a7a7a;
+}
+
+.single-note .top p {
+  font-weight: 500;
+}
+
+.single-note .top p:first-child {
+  text-decoration: line-through;
+}
+
+.single-note .middle {
+  align-self: self-start;
+  font-size: 12px;
+  color: #7a7a7a;
+  text-decoration: line-through;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.single-note .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.single-note .bottom span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.single-note .bottom span:first-child {
+  background-color: #f8c8dc;
+}
+.single-note .bottom span:last-child {
+  background-color: #a586c0;
+}
+
+.single-note .bottom div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.single-note .bottom .done {
+  font-size: 12px;
+  color: #7a7a7a;
+  text-decoration: line-through;
+}
+
+.single-note .bottom div img {
+  width: 15px;
+  height: 15px;
+}
